@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/header&footer.css">
+</head>
+<body>
+        
+    <div id="header"></div>
+
+    <div class="contact-container">
+    <div class="contact-text">Əlaqə</div>
+    <div class="contact-box">
+        <div class="contact-box-model">
+            <p>KBT Azərbaycan</p>
+            <p><a>Əhməd Rəcəbli-2küç. 1,AZ1075,Nərimanov rayonu,Bakı</a></p>
+            <p><a>+994 12 525 44 77</a></p>
+            <p><a>+994 12 465 73 24</a></p>
+            <p><a>office@kbt.az</a></p>
+        </div>
+        <div class="contact-box-model">
+            <p>KBT Azərbaycan</p>
+            <p><a>Əhməd Rəcəbli-2küç. 1,AZ1075,Nərimanov rayonu,Bakı</a></p>
+            <p><a>+994 12 525 44 77</a></p>
+            <p><a>+994 12 465 73 24</a></p>
+            <p><a>office@kbt.az</a></p>
+        </div>
+    </div>
+
+    <div class="form-wrapper">
+       
+            <form action="#" method="POST">
+                <label for="name">Ad və Soyad</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-poçt</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mesaj</label>
+                <textarea id="message" name="message" rows="9"required></textarea>
+
+                <div class="captcha">
+                    <p>Bu sayt reCAPTCHA tərəfindən qorunur və Google Məxfilik Siyasəti və Xidmət Şartları tətbiq edilir.</p>
+                </div>
+
+                <button type="submit">Göndər</button>
+            </form>
+        
+    </div>
+</div>
+
+<div id="footer"></div>
+<script src="./js/slider.js"></script>
+<script src="path/to/your/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  loadHTML("#header", "header.html");
+  loadHTML("#footer", "footer.html");
+</script>
+</body>
+</html>
