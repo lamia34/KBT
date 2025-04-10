@@ -8,6 +8,10 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    margin-top: 10rem;
+}
+.journey-div img{
+    margin-bottom: 20px;
 }
 .organization-div h2,
 .journey-div h2{
@@ -108,8 +112,8 @@
   }
   
   .circle {
-    width: 110px;
-    height: 110px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     color: #111;
     font-weight: 300;
@@ -265,5 +269,72 @@
   
   .card a:hover {
     text-decoration: underline;
+  }
+  
+
+
+  .kbt-section {
+    background-image: url('/KBT/image/about7.webp'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .kbt-section .overlay {
+    background-color: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .kbt-section .content {
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+    padding: 0 20px;
+  }
+  
+  .kbt-section .content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .kbt-section .content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .kbt-section .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .kbt-section .btn {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .kbt-section .btn.blue {
+    background-color: #3399ff;
+    color: #fff;
+  }
+  
+  .kbt-section .btn.outline {
+    background-color: transparent;
+    border: 2px solid #3399ff;
+    color: #fff;
+  }
+  
+  .kbt-section .btn:hover {
+    transform: scale(1.05);
   }
   
