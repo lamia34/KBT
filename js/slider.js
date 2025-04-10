@@ -67,14 +67,16 @@ function loadHTML(selector, file) {
 
 
 // Slider
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-
 function showSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+
   slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-    dots[i].classList.toggle('active', i === index);
+    slide.classList.remove('active');
+    dots[i].classList.remove('active');
+    if (i === index) {
+      slide.classList.add('active');
+      dots[i].classList.add('active');
+    }
   });
-  currentSlide = index;
 }
