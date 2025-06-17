@@ -1,0 +1,634 @@
+/* Poppins - Font Family Import from CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Journey Desing */
+.journey-div{   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 10rem auto 8rem;
+}
+.journey-div .journey-img{
+    margin-bottom: 20px;
+}
+.journey-div .journey-h2{
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    margin-bottom: 1.25rem;
+}
+.journey-div .journey-p{
+    font-weight: 400;
+    font-size: 1.125rem;
+    letter-spacing: .25px;
+    line-height: 1.5556em;
+    text-align: center;
+    color: #666;
+    max-width: 580px;
+}
+
+
+/* Our Facility Desing */
+.our-facility{
+    display: flex;
+    margin: 46px 3% 23px 3%;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.our-facility .facility-info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    height: auto;
+}
+.our-facility .facility-info .facility-title{
+  width: 100%;
+  font-size: 40px;
+  font-weight: 600;
+}
+.our-facility .facility-info img{
+  width: 70%;
+}
+.our-facility .facility-sec{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 2px;
+  cursor: default;
+  margin-top: 40px;
+}
+.our-facility .facility-sec .facility-description{
+  width: 100%;
+  font-size: 31px;
+  font-weight: 600;
+  line-height: 1.5em;
+  margin-bottom: 35px;
+  display: flex;
+  z-index: 5;
+}
+.our-facility .facility-sec .facility-position{
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  z-index: 5;
+}
+.our-facility .facility-sec .facility-fullname{
+  font-size: 18px;
+  letter-spacing: 0.25px;
+  margin-bottom: 120px;
+  display: flex;
+  z-index: 5;
+}
+
+.our-facility-button{
+    margin: 40px 20%;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+}
+.our-facility-button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100%;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in 0.3s;
+}
+.our-facility-button a:hover{
+    background-color: #4b9ce3;
+}
+.our-facility-button .f-line{
+    width: 2px;
+    height: 90%;
+    background-color: black;
+}
+
+
+/* Business Model Desing */
+  .biznes-model {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 4rem 20%;
+    text-align: left;
+  }
+  .biznes-model h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .biznes-model p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 960px;
+    margin-bottom: 3rem;
+  }
+  .biznes-model img {
+    width: 100%;
+  }
+ 
+
+/* Infrastructure Desing */
+  .infrastructure-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .infrastructure-section .infrastructure-item {
+    display: flex;
+    gap: 20px;
+    border-top: 2px solid #333;
+    padding-top: 20px;
+  }
+  .infrastructure-section .infrastructure-item .infra-icon {
+    min-width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .infrastructure-section .infrastructure-item .infra-icon .infra-card-img{
+    width: 35px;
+    height: 35px;
+  }
+  .infrastructure-section .infrastructure-item .infra-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .infrastructure-section .infrastructure-item .infra-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+  }
+  .infrastructure-section .infrastructure-item .infra-content ul ul {
+    list-style: square;
+    margin-top: 5px;
+  }
+  .yellow {
+    background-color: #fcd94c;
+  }
+  .green {
+    background-color: #81e6c4;
+  }
+  .gray {
+    background-color: #cccccc;
+  }
+  .dark-gray {
+    background-color: #aaa;
+  }
+
+
+/* Business Desing */
+  .business-lines {
+    padding: 50px 5%;
+    max-width: 1920px;
+    margin: 0 auto;
+  } 
+  .business-lines h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 38px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .business-lines .business-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
+  }
+  .business-lines .business-grid-container .business-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .business-lines .business-grid-container .business-card .business-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+  .business-lines .business-grid-container .business-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: default;
+  }
+  .business-lines .business-grid-container .business-card a {
+    position: relative;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0 5px;
+    display: inline-block;
+    width: 154px;
+    text-transform: uppercase;
+  }
+  .business-lines .business-grid-container .business-card a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0;
+    height: 2px;
+    background-color: #666; 
+    transition: all 0.3s ease;
+  }
+  .business-lines .business-grid-container .business-card a:hover::after {
+    width: 100%;
+  }
+  .business-lines .business-grid-container .business-card a i{
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  
+  
+
+/* KBT Info Desing */
+  .kbt-info {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+    margin: 40px 0 50px;
+  }
+  .kbt-info .kbt-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+  }
+  .kbt-info:hover .kbt-img {
+    transform: scale(1.2);
+  }
+  .kbt-info .kbt-info-overlay {
+    background-color: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .kbt-info .kbt-info-overlay .kbt-info-content {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 700px;
+    padding: 0 20px;
+  }
+  .kbt-info .kbt-info-overlay .kbt-info-content h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .kbt-info .kbt-info-overlay .kbt-info-content p {
+    font-size: 18px;
+    width: 80%;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .kbt-info .kbt-info-overlay .kbt-info-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .kbt-info .kbt-info-overlay .kbt-info-buttons .info-btn {
+    width: 260px;
+    height: 60px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+  .kbt-info .kbt-info-overlay .kbt-info-buttons .info-btn.blue {
+    background-color: #3399ff;
+    color: black;
+  }
+  .kbt-info .kbt-info-overlay .kbt-info-buttons .info-btn.outline {
+    background-color: black;
+    border: 2px solid #2773bf;
+    color: #2773bf;
+  }
+  .kbt-info .kbt-info-overlay .kbt-info-buttons .info-btn:hover {
+    background-color: #2773bf;
+  }
+  .kbt-info .kbt-info-overlay .kbt-info-buttons .info-btn.outline:hover {
+    background-color: #2773bf;
+    color: #000;
+  } 
+
+
+  /* Responsive Desing */
+  @media screen and (max-width: 420px){
+    .journey-div .journey-h2{
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 1rem;
+      max-width: 80%;
+    }
+    .journey-div .journey-p{
+        font-size: 10px;
+        line-height: 15px;
+        max-width: 500px;
+        width: 80%;
+    }
+
+    .business-lines h2 {
+      font-size: 28px;
+      margin-bottom: 26px;
+    }
+    .business-lines .business-grid-container {
+      gap: 50px;
+    }
+    .business-lines .business-grid-container .business-card {
+      gap: 8px;
+    }
+    .business-lines .business-grid-container .business-card .business-img {
+      height: 260px;
+    }
+    .business-lines .business-grid-container .business-card h3 {
+      font-size: 18px;
+    }
+    .business-lines .business-grid-container .business-card a {
+      position: relative;
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin: 0 5px;
+      display: inline-block;
+      width: 154px;
+      text-transform: uppercase;
+    }
+
+    .kbt-info .kbt-info-overlay .kbt-info-content h1 {
+      font-size: 36px;
+    }
+    .kbt-info .kbt-info-overlay .kbt-info-content p {
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 420px) and (max-width: 620px){
+    .journey-div .journey-h2{
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 1rem;
+      max-width: 80%;
+    }
+    .journey-div .journey-p{
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 500px;
+        width: 80%;
+    }
+  }
+
+  /* Our Facality Button, Biznes Model - Responsive Desing */
+  @media screen and (max-width: 760px){
+    .our-facility-button{
+      margin: 40px 5% 0 5%;
+      display: flex;
+      height: auto;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: none;
+    }
+    .our-facility-button a{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        width: 100%;
+        height: 100%;
+        color: black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease-in 0.3s;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 15px 0;
+    }
+    .our-facility-button .f-line{
+       display: none;
+    }
+
+    .biznes-model {
+      padding: 2rem 5%;
+    }
+    .biznes-model h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .biznes-model p {
+      font-size: 1rem;
+      max-width: 960px;
+      margin-bottom: 2rem;
+    }
+    .biznes-model img {
+      width: 100%;
+    }
+  }
+  @media (min-width: 760px) and (max-width: 1020px){
+    .our-facility-button{
+      margin: 40px 10%;
+      display: flex;
+      height: 60px;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+    .our-facility-button a{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        width: 100%;
+        height: 100%;
+        color: black;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease-in 0.3s;
+    }
+
+    .biznes-model {
+      padding: 2rem 10%;
+    }
+    .biznes-model h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .biznes-model p {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  /* Our Facility - Responsive Desing */
+  @media screen and (max-width: 860px){
+    .our-facility{
+      display: flex;
+      flex-direction: column;
+      margin: 0px 3%;
+      font-family: "Poppins", sans-serif;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+  }
+  .our-facility .facility-info{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: auto;
+      width: 96%;
+  }
+  .our-facility .facility-info .facility-title{
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .our-facility .facility-info img{
+    width: 70%;
+  }
+  .our-facility .facility-sec{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2px;
+    cursor: default;
+    margin-top: 30px;
+  }
+  .our-facility .facility-sec .facility-description{
+    width: 96%;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: 25px;
+    display: flex;
+    z-index: 5;
+  }
+  .our-facility .facility-sec .facility-position{
+    color: #666;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: flex;
+    z-index: 5;
+  }
+  .our-facility .facility-sec .facility-fullname{
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    margin-bottom: 10px;
+    display: flex;
+    z-index: 5;
+  }
+  }
+  @media (min-width: 860px) and (max-width: 1120px){
+    .our-facility{
+      display: flex;
+      margin: 46px 3% 23px 3%;
+      font-family: "Poppins", sans-serif;
+      position: relative;
+      overflow: hidden;
+  }
+  .our-facility .facility-info{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 20px;
+      height: auto;
+  }
+  .our-facility .facility-info .facility-title{
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .our-facility .facility-info img{
+    width: 70%;
+  }
+  .our-facility .facility-sec{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2px;
+    cursor: default;
+    margin-top: 40px;
+  }
+  .our-facility .facility-sec .facility-description{
+    width: 100%;
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: 35px;
+    display: flex;
+    z-index: 5;
+  }
+  .our-facility .facility-sec .facility-position{
+    color: #666;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: flex;
+    z-index: 5;
+  }
+  .our-facility .facility-sec .facility-fullname{
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    margin-bottom: 120px;
+    display: flex;
+    z-index: 5;
+  }
+  }

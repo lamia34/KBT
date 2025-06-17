@@ -1,0 +1,199 @@
+/* Poppins - Font Family Import from CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Contact Boxs Section Desing */
+.contactBoxs{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    max-width: 1920px;
+    margin: 140px auto 82px;
+    width: 91%;
+    font-family: "Poppins", sans-serif;
+    cursor: default;
+}
+.contactBoxs .contact-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.contactBoxs .contact-text p{
+   font-size: 13px;
+   letter-spacing: 2px;
+   font-weight: 700;
+   color:#777;
+}
+.contactBoxs .contact-text h1{
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.contactBoxs .contact-box{
+    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; 
+    margin: 0 auto;
+}
+.contactBoxs .contact-box .contact-box-model{
+    background-color:#5e9fe3 ;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    width: calc(44.3333% - 1.875rem);
+    padding: 30px 20px 12px 20px;   
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all ease-in-out 0.3s;
+}
+.contactBoxs .contact-box .contact-box-model p{
+  font-weight: 500;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contactBoxs .contact-box .contact-box-model p i{
+    display: none;
+}
+.contactBoxs .contact-box .contact-box-model a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/* Contact Form Section Desing */
+.contact-container{
+    max-width: 1920px;
+    width: 100%;
+    margin: auto; 
+    font-family: "Poppins", sans-serif;
+}
+.contact-container .form-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-bottom: 40px;
+}
+.contact-container .form-wrapper form {
+      display: flex;
+      flex-direction: column;
+      width: 560px;
+      z-index: 100;
+}
+.contact-container .form-wrapper form label {
+      font-size: 17px;
+      margin-bottom: 5px;
+      padding-left: 30px;
+      color: #606060;
+}
+.contact-container .form-wrapper form input, textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #606060;
+      border-radius: 30px;
+      font-size: 16px;
+      padding-left: 30px;
+}
+.contact-container .form-wrapper form input[type="text"], input[type="email"] {
+      height: 60px;
+}
+.contact-container .form-wrapper form textarea {
+      resize: vertical;
+}
+.contact-container .form-wrapper form button {
+      background-color:#5e9fe3;
+      color: white;
+      width: 70%;
+      height: 60px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+      margin: auto;
+      color: black;
+      min-width: 200px;
+      font-family: "Poppins", sans-serif;
+      transition: all ease 0.3s;
+}
+.contact-container .form-wrapper form button:hover{
+    background-color:#477fba;
+}
+.contact-container .form-wrapper form  .captcha {
+      font-size: 18px;
+      color: #777;
+      margin: 12px 0 25px 0;
+      text-align: center;
+}
+.contact-container .form-wrapper svg{
+    position: absolute;
+    width: 400px;
+}
+#Con-Layer-1{
+    top: 0;
+    left: 7%;
+}
+#Con-Layer-2{
+    top: 0;
+    right: 12%;
+    transform: rotate(-230deg);
+}
+
+
+/* Responsive Desing */
+@media screen and (max-width: 860px){
+        .contactBoxs .contact-box .contact-box-model {
+          width: 100%;
+          padding: 20px;
+          transition: all 0.3s ease;
+        }
+      
+        .contact-title {
+          font-size: 20px;
+          font-weight: bold;
+          cursor: pointer;
+          margin-bottom: 10px;
+        }
+      
+        .contact-hidden {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+        }
+      
+        .contact-box-model.active .contact-hidden {
+          max-height: 300px; /* tahmini yükseklik */
+        }
+        .contactBoxs .contact-box .contact-box-model p i{
+            display: block;
+        }
+      }
+      
+
+  
+
+@media screen and (max-width: 950px){
+    .contact-container .form-wrapper svg{
+        display: none;
+    }
+    .contact-container .form-wrapper form{
+        width: 98%;
+        margin: auto;
+    }
+}

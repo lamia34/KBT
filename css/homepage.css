@@ -1,0 +1,764 @@
+/* Poppins - Font Family Import from CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Home Slider Desing */
+.sliderhome {
+    position: relative;
+    width: 100%;
+    height: 98vh; 
+    overflow: hidden;
+    background-color: #000;
+    z-index: 1;
+}
+.sliderhome .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sliderhome .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+.sliderhome .slider .slide img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}  
+.sliderhome .slider .slide.active {
+    opacity: 1;
+    z-index: 2; 
+}
+.sliderhome .slider .slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.436);
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.sliderhome .slider .slide .slider-text {
+    position: absolute;
+    top: 42%;
+    left: 12%;
+    right: 12%;
+    max-width: 1920px;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+    font-weight: 600;
+}
+.sliderhome .slider .slide .slider-text h2 {
+    max-width: 1920px;
+    font-size: 80px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.sliderhome .slider .slide .slider-text p {
+    margin-bottom: 24px;
+    max-width: 1920px;
+    font-size: 20px;
+}
+
+.sliderhome .slider .slide .slider-text a {
+    position: relative;
+    width: 122px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sliderhome .slider .slide .slider-text a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+.sliderhome .slider .slide .slider-text a:hover::after {
+    width: 100%;
+}
+.sliderhome .slider .dots {
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+}
+.sliderhome .slider .dots .dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 16px;
+    background: rgba(255, 255, 255, 0.459);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.sliderhome .slider .dots .dot:hover {
+    transform: scale(1.3);
+    background: rgba(255, 255, 255, 0.679);
+}
+.sliderhome .slider .dots .dot.active {
+    transform: scale(1.6);
+    background-color: #5e9ee3e9;
+    border: 2px solid white;
+}
+  
+
+/* Advantages Desing */
+.advantages {
+    width: 100%;
+    height: auto;
+    background-color: #5e9fe3;
+}
+.advantages .adv-container {
+    width: 100%;
+    max-width: 1920px; 
+    margin: 0 auto 80px; 
+    height: auto;
+    padding: 22px 4%;
+    background-color: #5e9fe3;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.advantages .adv-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 18px;
+    transition: all ease-in-out 0.3s;
+    padding: 26px 0 15px;
+    width: 21%;
+    height: auto;
+}
+.advantages .adv-line{
+    width: 1px;
+    height: 140px;
+    background-color: #fff;
+}
+.advantages .adv-card:hover{
+    background-color: #2084e1;
+}
+.advantages .adv-card img{
+    width: 100px;
+    height: 100px;
+}
+.advantages .adv-card p {
+    position: relative;
+    
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+    font-size: 13px;
+    overflow: hidden;
+}
+.advantages .adv-card p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+}
+.advantages .adv-card:hover p::after {
+    width: 100%;
+}
+
+
+
+/* Our Project Desing */
+.our-projects{
+    height: auto;
+    margin: 60px 0 90px 0;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.our-projects svg{
+    position: absolute;
+    height: auto;
+}
+.our-projects .proj-circle{
+    display: block;
+    width: 1600px;
+    top: 80px;
+    left: 5%;
+}
+.our-projects .proj-line1{
+    width: 600px;
+    top: -70px;
+    right: -190px;
+}
+.our-projects .proj-line2{
+    width: 880px;
+    top: -160px;
+    right: -340px;
+}
+.our-projects .project-container {
+    width: 100%;
+    padding: 40px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+}
+.our-projects .project-container h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    cursor: default;
+    display: flex;
+    z-index: 100;
+    letter-spacing: 0;
+    line-height: 1.25em;
+}
+.our-projects .project-container .project-slider-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.our-projects .project-container .project-slider-section .project-slider {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.our-projects .project-container .project-slider-section .project-slider::-webkit-scrollbar {
+    display: none;
+}
+.our-projects .project-container .project-slider-section .project-slider .project-card {
+    display: flex;
+    z-index: 5;
+    width: 450px;
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    position: relative;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.our-projects .project-container .project-slider-section .project-slider .project-card:hover{
+     transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);   
+}
+.our-projects .project-container .project-slider-section .project-slider .project-card .proj-opacity {
+    width: 100%;
+    height: 100%;
+    background-color: #0000005e;
+    padding: 40px 20% 40px 40px;
+    gap: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+}
+.our-projects .project-container .project-slider-section .project-slider .project-card .proj-opacity h3{ 
+    font-weight: 600;
+    font-size: 22px;
+}
+.our-projects .project-container .project-slider-section .project-slider .project-card .proj-opacity p{
+    font-size: 18px;
+}
+.our-projects .project-container .project-slider-section .project-slider-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 60px;
+    gap: 30px;
+}
+.our-projects .project-container .project-slider-section .project-slider-buttons .proj-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #5e9fe3;
+    transition: all 0.2s ease-in-out;
+}
+.our-projects .project-container .project-slider-section .project-slider-buttons .proj-button:hover {
+    background-color: #396ca2;
+}
+.our-projects .project-container .project-slider-section .project-slider-buttons .proj-button i {
+    font-weight: 900;
+    font-size: 24px;
+    color: black;
+}
+.our-projects .project-container .project-slider-section .project-slider-buttons span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+
+/* Join Us Desing */
+.joinus{
+    display: flex;
+    flex-direction: column;
+    margin: 46px 3% 23px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.joinus .join-info{
+    display: flex;
+    width: 100%;
+    height: auto;
+    z-index: 20;
+}
+.joinus .join-info .info-text-L{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2px;
+    cursor: default;
+    z-index: 15;
+}
+.joinus .join-info .profile-img2{
+    display: none;
+}
+.joinus .join-info .info-text-L p{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #666;
+    font-size: 13px;
+    width: 100%;
+}
+.joinus .join-info .info-text-L h2{
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+}
+.joinus .join-info .info-text-R{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 92px;
+    cursor: default;
+    z-index: 15;
+}
+.joinus .svg-info1{
+    position: absolute;
+    width: 600px;
+    top: -90px;
+    right: -150px;
+    transform: rotate(315deg);
+
+}
+.joinus .svg-info2{
+    position: absolute;
+    width: 880px;
+    top: -180px;
+    right: -340px;
+    transform: rotate(320deg);
+    display: block;
+    z-index: 11;
+}
+.joinus .progress-circle{
+    position: absolute;
+    display: block;
+    width: 1600px;
+    top: 42px;
+    right: -200px;
+}
+.joinus .join-info .info-text-R h2{
+    width: 100%;
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: 35px;
+    display: flex;
+    z-index: 5;
+}
+.joinus .join-info .info-text-R .position{
+    color: #666;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: flex;
+    z-index: 5;
+}
+.joinus .join-info .info-text-R .fullname{
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    margin-bottom: 120px;
+    display: flex;
+    z-index: 5;
+}
+.joinus .join-sec{
+    width: 100%;
+    height: 225px;
+    background-color: #4799e5;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 16%;
+}
+.joinus .join-sec .tractor{
+    width: 470px;
+    height: 200px;
+    display: flex;
+    z-index: 10;
+}
+.joinus .join-sec .profile-img{
+    width: 72%;
+    height: 72%;
+    object-fit: contain;
+    position: absolute;
+    top: 23%;
+    RIGHT: 47%;
+    display: flex;
+    z-index: 99;
+}
+.join-button{
+    margin: 0 19% 60px;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+}
+.join-button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100%;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in 0.3s;
+}
+.join-button a:hover{
+    background-color: #4b9ce3;
+}
+.join-button .j-line{
+    width: 2px;
+    height: 90%;
+    background-color: black;
+}
+
+
+/* Sliderhome, Join Us Button - Responsive Desing */
+@media screen and (max-width: 370px){
+    .sliderhome {
+        height: 80vh; 
+    }
+    .sliderhome .slider .slide .slider-text h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .sliderhome .slider .slide .slider-text p {
+        margin-bottom: 24px;
+        font-size: 16px;
+    }
+    .sliderhome .slider .slide .slider-text {
+        top: 52%;
+    }
+    .join-button{
+        margin: 60px 5% 100px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        box-shadow: none;
+    }
+    .join-button a{
+        color: black;
+        border-top: 1px solid black;
+        padding: 15px 0;
+        font-size: 12px;
+    }
+    .join-button a:last-child{
+        border-bottom: 1px solid black;
+    }
+    .join-button .j-line{
+       display: none;
+    }
+}
+@media (min-width: 370px) and (max-width: 680px){
+    .sliderhome {
+        height: 94vh; 
+    }
+    .sliderhome .slider .slide .slider-text {
+        top: 47%;
+    }
+    .sliderhome .slider .slide .slider-text h2 {
+        font-size: 54px;
+        margin-bottom: 10px;
+    }
+    .sliderhome .slider .slide .slider-text p {
+        margin-bottom: 24px;
+        font-size: 18px;
+    }
+    .join-button{
+        margin: 60px 5% 100px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        box-shadow: none;
+    }
+    .join-button a{
+        color: black;
+        border-top: 1px solid black;
+        padding: 20px 0;
+    }
+    .join-button a:last-child{
+        border-bottom: 1px solid black;
+    }
+    .join-button .j-line{
+       display: none;
+    }
+}
+@media (min-width: 680px) and (max-width: 1240px){
+    .join-button{
+        margin: 0 5% 60px; 
+    }   
+}
+/* Advantages, Our Project - Responsive Desing */
+@media screen and (max-width: 520px){
+    .advantages .adv-container {
+        padding: 22px 4%;
+        background-color: #5e9fe3;
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .advantages .adv-card{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 14px;
+    }
+    .advantages .adv-line{
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+    }
+    .advantages .adv-card img{
+        width: 60px;
+        height: 60px;
+    }
+    .advantages .adv-card p{
+        text-align: start;
+        font-size: 11px;
+    }
+
+    .our-projects{
+        height: auto;
+        margin: 30px 0 70px 0;
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        overflow: hidden;
+    }
+    .our-projects .proj-circle{
+        display: none;
+    }
+    .our-projects .project-container h1 {
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 520px) and (max-width: 900px){
+    .advantages .adv-container {
+        padding: 22px 4%;
+        background-color: #5e9fe3;
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .advantages .adv-card{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 14px;
+    }
+    .advantages .adv-line{
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+    }
+    .advantages .adv-card img{
+        width: 80px;
+        height: 80px;
+    }
+    .advantages .adv-card p{
+        text-align: start;
+    }
+}
+/* Join Us - Responsive Desing */
+@media screen and (max-width: 360px){
+    .joinus{
+        margin: 46px 3% 0px;
+    }
+    .joinus .join-sec{
+        display: none;
+    }
+    .joinus .join-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .joinus .join-info .profile-img2{
+        display: block;
+        width: 80%;
+    }
+    .joinus .join-info .info-text-L{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2px;
+        cursor: default;
+        z-index: 15;
+        margin-bottom: 20px;
+    }
+    .joinus .join-info .info-text-L h2{
+        width: 100%;
+        font-size: 38px;
+        line-height: 44px;
+        font-weight: 600;
+    }
+    .joinus .join-info .info-text-R{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        cursor: default;
+        z-index: 15;
+    }
+    .joinus .join-info .info-text-R h2{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .joinus .join-info .info-text-R .position{
+        font-size: 8px;
+    }
+    .joinus .join-info .info-text-R .fullname{
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+
+}
+@media (min-width: 360px) and (max-width: 860px){
+    .joinus .join-sec{
+        display: none;
+    }
+    .joinus .join-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .joinus .join-info .profile-img2{
+        display: block;
+        width: 60%;
+    }
+    .joinus .join-info .info-text-L{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2px;
+        cursor: default;
+        z-index: 15;
+    }
+    .joinus .join-info .info-text-R{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        cursor: default;
+        z-index: 15;
+    }
+    .joinus .join-info .info-text-R h2{
+        font-size: 26px;
+    }
+    .joinus .join-info .info-text-R .position{
+        font-size: 12px;
+    }
+    .joinus .join-info .info-text-R .fullname{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 860px) and (max-width: 1020px){
+    .joinus .join-sec .profile-img{
+        width: 400px;
+        height: 400px;
+        object-fit: contain;
+        position: absolute;
+        top: 35%;
+        RIGHT: 57%;
+        display: flex;
+        z-index: 99;
+    }
+    .joinus .join-sec .traxtor-img{
+        width: 450px;
+        height: 180px;
+    }
+    .joinus .join-sec{
+        padding-right: 12%;
+    }
+    .joinus .join-info .info-text-R h2{
+        font-size: 26px;
+    }
+    .joinus .join-info .info-text-R .position{
+        font-size: 12px;
+    }
+    .joinus .join-info .info-text-R .fullname{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,931 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 15;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+    z-index: 1;
+  }
+
+  .title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 12px;
+    z-index: 2;
+  }
+
+  .title span {
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.4s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      /* transform: translateY(0); */
+    }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    top: calc(50% + 100px);
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-indicator svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+@keyframes scrollWheel {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px); 
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.scroll-indicator svg #wheel {
+    transform-origin: center center; 
+    animation: scrollWheel 1.5s infinite ease-in-out; 
+}
+
+
+
+  @media (max-width: 865px) {
+    .title span {
+      font-size: 25px;
+    }
+    .mouse{
+        top: 50%;
+    }
+    }
+
+
+
+
+    .navbar-history {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 12.5rem;
+        height: 100vh;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #ddd;
+        z-index: 10;
+    }
+
+    .h-nav .h-n-ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Elementləri sol tərəfə düzləndirir */
+    }
+
+    .h-nav .h-n-ul li {
+        position: relative;
+        padding: 0 0 2.2rem 0.875rem;
+    }
+
+    .h-nav .h-n-ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem; /* 16px-ə bərabər */
+        transition: color 0.3s ease;
+    }
+
+    .h-nav .h-n-ul li.active a {
+        color: #ffc700;
+    }
+
+    .h-nav .h-n-ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.1875rem; /* 3px-ə bərabər */
+        height: 100%;
+        background: #747678;
+    }
+
+    .h-nav .h-n-ul li.active::before {
+        background: #ffc700;
+    }
+      
+      /* Sağ hissə */
+      /* .content {
+        margin-left: 13rem;
+        width: 100%;
+      }
+      
+      section[class^="h"] {
+        position: relative;
+        min-height: 100vh;
+        z-index: 5;
+        text-align: right;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      
+      [class$="-fold"] {
+        min-height: 100%;
+        padding-left: 12.5rem;
+        width: 100%;
+      }
+      
+      [class$="-fold-in"] {
+        position: relative;
+        z-index: 3;
+        padding: 5rem 2rem;
+        margin: 0 0 0 auto;
+        max-width: 41.25rem;
+      }
+      
+      [class$="-head"] .h {
+        font-size: 32px;
+        color: #222;
+        margin-bottom: 10px;
+      }
+      
+      [class$="-subtitle"] h4 {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      
+      [class$="-cont-di"] p {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+      }
+      
+      [class$="-background"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      
+      [class$="-back-img"] {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+      } */
+      
+      
+      
+      /* 2000 */
+      .h2000 {
+        position: relative;
+        padding-left: 12.5rem; /* Sol tərəfdən məsafə */
+      }
+      
+      .h2000 .h2000-fold {
+        position: relative;
+        min-height: 100%;
+      }
+      
+      .h2000 .h2000-fold .h2000-fold-in {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 3;
+        padding-bottom: 7.5rem; 
+        padding: 0 6.25rem; 
+      }
+      
+      .h2000 .h2000-fold .h2000-head {
+        position: relative;
+        padding-top: 12.5rem; 
+        overflow: hidden;
+        margin-bottom: 0.9375rem; 
+      }
+      
+      .h2000 .h2000-fold .h2000-head .h2000-title {
+        position: relative;
+        width: 26.25rem;
+        height: 9.25rem;
+        overflow: visible;
+        margin-bottom: 0.9375rem;
+      }
+      
+      .h2000 .h2000-fold .h2000-head .h2000-title h3 {
+        position: static;
+        opacity: 1;
+        filter: none;
+        transform: none;
+        font-size: 9.1875rem;
+        color: #666;
+        margin: 0; 
+      }
+      
+      .h2000 .h2000-fold .h2000-head .h2000-subtitle {
+        border-bottom: 1px solid gray;
+        width: 0rem;
+        margin-left: 17px;
+        margin-top: 80px;
+        margin-bottom: 30px;
+      }
+      
+      .h2000 .h2000-fold .h2000-content {
+        padding-top: 0.5rem;
+        background: #fff;
+        color: #666;
+        padding-bottom: 0.9375rem;
+        padding: 0 100px; 
+      }
+      
+      .h2000 .h2000-fold .h2000-content .h2000-cont-di {
+        
+      }
+      
+      .h2000 .h2000-fold .h2000-background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; 
+      }
+      
+      
+      /* 2002 */
+      .h2002 {
+        position: relative;
+        padding-left: 12.5rem;
+      }
+      
+      .h2002 .h2002-fold {
+        min-height: 100%;
+      }
+      
+      .h2002 .h2002-fold .h2002-fold-in {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 3;
+        padding-bottom: 7.5rem;
+        padding: 0 6.25rem;
+      }
+      
+      .h2002 .h2002-fold .h2002-head {
+        padding-top: 7.5rem;
+        padding: 0 6.25rem;
+      }
+      
+      .h2002 .h2002-fold .h2002-head .h2002-title {
+        margin: 0 0 0 auto;
+        max-width: 26.25rem;
+        margin-bottom: 0.9375rem;
+      }
+      
+      .h2002 .h2002-fold .h2002-head .h2002-title h3 {
+        line-height: 1;
+        font-size: 9.1875rem;
+        color: #fff;
+        font-weight: 500;
+        margin: 0; 
+      }
+      
+      .h2002 .h2002-fold .h2002-head .h2002-subtitle {
+        width: 465px;
+        margin: 0 0 1.25rem;
+      }
+      
+      .h2002 .h2002-fold .h2002-head .h2002-subtitle h4 {
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: 0;
+        line-height: 1.5em;
+        color: #fff;
+        margin: 0; 
+      }
+      
+      .h2002 .h2002-fold .h2002-content {
+        padding-bottom: 0.9375rem;
+      }
+      
+      .h2002 .h2002-fold .h2002-content .h2002-cont-di {
+        margin: 0 0 0 auto;
+        max-width: 31.25rem;
+      }
+      
+      .h2002 .h2002-fold .h2002-content .h2002-cont-di p {
+        font-weight: 400;
+        font-size: 1.125rem;
+        letter-spacing: .25px;
+        line-height: 1.5556em;
+        color: #fff;
+        margin: 0; 
+      }
+      
+      .h2002 .h2002-fold .h2002-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-image: linear-gradient(221deg, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.82));
+      }
+      
+      .h2002 .h2002-fold .h2002-background .h2002-back-img-in {
+        width: 100%;
+        height: 100%;
+      }
+      
+      .h2002 .h2002-fold .h2002-background .h2002-img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      
+      
+      
+      
+      /* 2005 */
+      .h2005 {
+        position: relative;
+        -webkit-transform: none !important;
+        -ms-transform: none !important;
+        transform: none !important;
+        z-index: 5 !important;
+        min-height: auto;
+        width: 100%;
+      }
+      
+      .h2005 .h2005-fold {
+        min-height: 100%;
+        padding-left: 12.5rem;
+      }
+      
+      .h2005 .h2005-fold .h2005-fold-in {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 3;
+        padding-bottom: 7.5rem;
+      }
+      
+      .h2005 .h2005-fold .h2005-head {
+        padding: 0 6.25rem;
+        padding-top: 7.5rem;
+      }
+      
+      .h2005 .h2005-fold .h2005-head .h2005-head-in {
+        max-width: 26.25rem;
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: .5px;
+      }
+      
+      .h2005 .h2005-fold .h2005-head .h2005-title {
+        margin: 0 0 0.9375rem;
+      }
+      
+      .h2005 .h2005-fold .h2005-head .h2005-title h3 {
+        font-size: 9.1875rem;
+        color: #000;
+        font-weight: 600;
+        letter-spacing: 0;
+        margin: 0; 
+      }
+      
+      .h2005 .h2005-fold .h2005-head .h2005-subtitle {
+        margin: 0 0 1.25rem;
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: .5px;
+      }
+      
+      .h2005 .h2005-fold .h2005-head .h2005-subtitle h4 {
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: 0;
+        line-height: 1.5em;
+        margin: 0; 
+      }
+      
+      .h2005 .h2005-fold .h2005-content {
+        color: #000;
+        padding-bottom: 0.9375rem;
+        font-weight: 400;
+        font-size: 1.125rem;
+        letter-spacing: .25px;
+        line-height: 1.5556em;
+        padding: 0 6.25rem;
+      }
+      
+      .h2005 .h2005-fold .h2005-content .h2005-cont-di {
+        max-width: 21.875rem;
+      }
+      
+      .h2005 .h2005-fold .h2005-content .h2005-cont-di p {
+        font-weight: 400;
+        font-size: 1.125rem;
+        letter-spacing: .25px;
+        line-height: 1.5556em;
+        color: #000;
+        margin: 0; 
+      }
+      
+      .h2005 .h2005-fold .h2005-background {
+        background: #ffc700;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      
+      .h2005 .h2005-fold .h2005-background .h2005-background-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: .5px;
+      }
+      
+      .h2005 .h2005-fold .h2005-background .h2005-background-map {
+        position: absolute;
+        top: -6.875rem;
+        right: 0;
+        width: 50%; 
+        height: auto; 
+      }
+      
+      .h2005 .h2005-fold .h2005-background .h2005-background-map svg {
+        width: 100%;
+        height: auto;
+      }
+      
+      
+      
+      
+      
+      
+      
+      /* 2012 */
+      .h2012 {
+        position: relative;
+        transform: none !important;
+        z-index: 5 !important;
+        min-height: auto;
+        width: 100%;
+      }
+      
+      .h2012 .h2012-fold {
+        min-height: 100%;
+        padding-left: 12.5rem;
+      }
+      
+      .h2012 .h2012-fold .h2012-fold-in {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 3;
+        padding-bottom: 7.5rem;
+      }
+      
+      .h2012 .h2012-head {
+        padding-top: 7.5rem;
+        padding: 0 6.25rem;
+      }
+      
+      .h2012 .h2012-head .h2012-title {
+        margin: 0 0 0.9375rem;
+      }
+      
+      .h2012 .h2012-head .h2012-title h3 {
+        font-size: 9.1875rem;
+        font-weight: 600;
+        letter-spacing: 0;
+        margin: 0; 
+      }
+      
+      .h2012 .h2012-head .h2012-subtitle {
+        margin: 0 0 1.25rem;
+      }
+      
+      .h2012 .h2012-head .h2012-subtitle h4 {
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: 0;
+        line-height: 1.5em;
+        margin: 0; 
+      }
+      
+      .h2012 .h2012-content {
+        padding-bottom: 0.9375rem;
+        padding: 0 6.25rem;
+      }
+      
+      .h2012 .h2012-content .h2012-cont-di {
+        max-width: 21.875rem;
+      }
+      
+      .h2012 .h2012-content .h2012-cont-di p {
+        font-weight: 400;
+        font-size: 1.125rem;
+        letter-spacing: .25px;
+        line-height: 1.5556em;
+        margin: 0; 
+      }
+      
+      .h2012 .h2012-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #ffc700; 
+      }
+      
+      .h2012 .h2012-background .h2012-fold-shape {
+        display: none; 
+      }
+      
+      .h2012 .h2012-background .h2012-moving-shape {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        overflow: hidden;
+      }
+      
+      .h2012 .h2012-background .h2012-moving-shape svg:nth-child(1) {
+        top: 0.25rem;
+        right: -18.75rem;
+        transform: scale(1.5) rotate(20deg);
+        position: absolute;
+        width: 650px;
+        height: 500px;
+      }
+      
+      
+      
+      
+      /* 2016 */
+      
+      .h2016 {
+        position: relative;
+        min-height: auto;
+        transform: none !important;
+        z-index: 5 !important;
+        width: 100%;
+        top: 0px;
+      }
+      
+      .h2016 .h2016-fold {
+        min-height: 100%;
+        padding-left: 12.5rem;
+      }
+      
+      .h2016 .h2016-fold .h2016-fold-in {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 3;
+        padding-bottom: 7.5rem;
+        padding-top: 7.5rem;
+        padding: 0px 6.25rem;
+      }
+      
+      .h2016 .h2016-head-in {
+        max-width: 26.25rem;
+      }
+      
+      .h2016 .h2016-title {
+        margin: 0px 0px 0.9375rem;
+      }
+      
+      .h2016 .h2016-title h3 {
+        margin: 0px;
+        font-size: 9.1875rem;
+      }
+      
+      .h2016 .h2016-subtitle {
+        margin: 0px 0px 1.25rem;
+      }
+      
+      .h2016 .h2016-subtitle h4 {
+        font-weight: 600;
+        font-size: 2rem;
+        letter-spacing: 0px;
+        line-height: 1.5em;
+      }
+      
+      .h2016 .h2016-content {
+        color: rgb(102, 102, 102);
+        padding-bottom: 0.9375rem;
+      }
+      
+      .h2016 .h2016-cont-in {
+        max-width: 31.25rem;
+      }
+      
+      .h2016 .h2016-cont-in p {
+        font-weight: 400;
+        font-size: 1.125rem;
+        letter-spacing: 0.25px;
+        line-height: 1.5556em;
+      }
+      
+      .h2016 .h2016-background {
+        background: rgb(248, 248, 248); 
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      
+      .h2016 .h2016-background .h2016-movingshape {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        z-index: -1;
+        overflow: hidden;
+      }
+      
+      .h2016 .h2016-background .h2016-movingshape svg:nth-child(1) {
+        top: 42.75rem;
+        right: -72.625rem;
+        transform: scale(3);
+        position: absolute;
+        width: 700px;
+        height: 700px;
+      }
+      
+      .h2016 .h2016-background .h2016-movingshape svg:nth-child(2) {
+        top: 46.75rem;
+        right: -80.625rem;
+        transform: scale(3);
+        position: absolute;
+        width: 800px;
+        height: 800px;
+      }
+      
+      .h2016 .h2016-background .h2016-back-in {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      
+      
+      
+      /* 2017 */
+      .h2017 {
+        position: relative;
+        min-height: auto;
+        transform: none !important;
+        z-index: 5 !important;
+        text-align: right;
+        top: 0px;
+        width: 100%;
+      }
+      
+      .h2017 .h2017-fold {
+        min-height: 100%;
+        padding-left: 12.5rem;
+        text-align: right;
+      }
+      
+      .h2017 .h2017-fold .h2017-fold-in {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 3;
+        padding-bottom: 7.5rem;
+        text-align: right;
+        margin: 0px 0px 0px auto;
+        max-width: 41.25rem;
+      }
+      
+      .h2017 .h2017-head {
+        text-align: right;
+      }
+      
+      .h2017 .h2017-head .h2017-title {
+        margin-left: auto;
+      }
+      
+      .h2017 .h2017-head .h2017-title h3 {
+        margin: 0px;
+        font-size: 9.1875rem;
+      }
+      
+      .h2017 .h2017-head .h2017-subtitle {
+        margin-left: auto;
+      }
+      
+      .h2017 .h2017-head .h2017-subtitle h4 {
+        font-weight: 600;
+        font-size: 2rem;
+        letter-spacing: 0px;
+        line-height: 1.5em;
+      }
+      
+      .h2017 .h2017-content {
+        color: rgb(102, 102, 102);
+        padding-bottom: 0.9375rem;
+        text-align: right;
+      }
+      
+      .h2017 .h2017-content .h2017-cont-di {
+        margin-left: auto;
+        max-width: 31.25rem;
+      }
+      
+      .h2017 .h2017-content .h2017-cont-di p {
+        font-weight: 400;
+        font-size: 1.125rem;
+        letter-spacing: 0.25px;
+        line-height: 1.5556em;
+      }
+      
+      .h2017 .h2017-background {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-image: linear-gradient(221deg, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.82));
+      }
+      
+      .h2017 .h2017-background .h2017-back-img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        
+      }
+      
+      
+      
+      
+      
+      
+      
+      /* today */
+      .today {
+          position: relative;
+          transform: none !important;
+          z-index: 5 !important;
+          min-height: auto;
+          width: 100%;
+          top: 0;
+          transition: transform .4s ease-in, -webkit-transform .4s ease-in;
+      }
+      
+      .today .today-fold {
+          min-height: 100%;
+          padding-left: 12.5rem;
+          padding-right: 12.5rem;
+      }
+      
+      .today .today-fold .today-fold-in {
+          box-sizing: border-box;
+          position: relative;
+          z-index: 3;
+          padding-bottom: 7.5rem;
+      }
+      
+      @media (min-width: 900px) {
+          .today .today-fold .today-image {
+              width: 35rem;
+              padding-left: 0;
+              padding-right: 0;
+          }
+      }
+      
+      .today .today-fold .today-image {
+          width: 35rem;
+          box-sizing: border-box;
+          position: absolute;
+          top: 50%;
+          right: 2.5rem;
+          -webkit-transform: translateY(-30%);
+          -ms-transform: translateY(-30%);
+          transform: translateY(-30%);
+          z-index: -1;
+          max-width: calc(100% - 41.25rem);
+          padding: 0 6.25rem;
+      }
+      
+      .today .today-fold .today-image .img-di {
+          width: 100%;
+          height: auto; 
+      }
+      
+      .today .today-fold .today-image .img-di img {
+          display: block; 
+          width: 100%;
+          height: auto;
+      }
+      
+      .today .today-fold .today-head {
+          padding-top: 7.5rem;
+          padding-left: 6.25rem;
+      }
+      
+      .today .today-head .today-subtitle h4 {
+          font-weight: 600;
+          font-size: 2rem;
+          letter-spacing: 0;
+          line-height: 1.5em;
+          margin: 0; 
+      }
+      
+      .today .today-content {
+          color: #666;
+          padding-bottom: 0.9375rem;
+          font-weight: 400;
+          font-size: 1.125rem;
+          letter-spacing: .25px;
+          line-height: 1.5556em;
+          padding-left: 6.25rem;
+      }
+      
+      .today .today-content .today-cont-di p {
+          font-weight: 400;
+          font-size: 1.125rem;
+          letter-spacing: .25px;
+          line-height: 1.5556em;
+          margin: 0; 
+      }
+      
+      .today .today-background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background-color: #fff; 
+      }   
